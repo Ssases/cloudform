@@ -8,7 +8,7 @@ pipeline {
         }
         stage('cfn stack deploy') {
             steps {
-            sh ' aws cloudformation delete --template-file ec2.yaml --stack-name ec2-creation --region us-west-1'
+            sh ' aws cloudformation delete-stack --stack-name ec2-creation --region us-west-1'
             }
         }
     }
