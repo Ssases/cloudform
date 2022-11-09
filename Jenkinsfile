@@ -8,7 +8,7 @@ pipeline {
         }
         stage('cfn stack deploy') {
             steps {
-            sh ' aws cloudformation deploy --template-file ec2.yaml --stack-name ec2-creation'
+            sh ' aws cloudformation deploy --template-file ec2.yaml --stack-name ec2-creation --region us-west-1'
             }
         }
     }
