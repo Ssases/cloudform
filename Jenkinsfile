@@ -6,7 +6,7 @@ pipeline {
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Ssases/cloudform.git']]])
            }
         }
-        stage('cfn stack deploy for testing for test') {
+        stage('cfn stack deploy for testing for test1') {
             steps {
             sh ' aws cloudformation delete-stack --stack-name ec2-creation --region us-west-1'
             }
